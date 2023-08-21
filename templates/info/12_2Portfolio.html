@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      html {
+    --scrollbarBG: black;
+    --thumbBG: yellow; /* Change accordingly */
+    }
+    body::-webkit-scrollbar {
+      width: 11px;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 3px solid var(--scrollbarBG);
+    }
+
+  /* Remove side scroll, we dont want that exposure*/
+  body {
+    overflow-x: hidden;
+  }
+    .char {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 4rem yellow; /* Change accordingly */
+    }
+
+    .char.fade-in {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 1rem yellow; /* Change accordingly */
+    }
+
+    .flexbox--small {
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium {
+    /* Increase the default flexbox size */
+    flex: 2 2 30em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: yellow;
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
+    }
+
+    .flexbox--big {
+    /* Increase the default flexbox size */
+    flex: 1 1 40em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: yellow; /* Change accordingly */
+    }
+    .flexbox--big {
+      flex-direction: column;
+    }
+    .flexbox--big a {
+      text-decoration: none;
+      color: yellow; /* Change accordingly */
+    }
+    #column {
+        flex-direction: column;
+    }
+
+    
+
+    #column .image-container {
+      transform: translate(10%, -00%);
+    }
+
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
+    .navbar {
+        position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background:none;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 9999; /* Set a higher z-index value if needed */
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar-arrow {
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        transform: rotate(45deg);
+        margin-right: 10px;
+    }
+
+    .navbar-text {
+        color: rgb(255, 255, 0);
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
+        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+    </nav>
+    <!-- Header -->
+    <h1>Andre Portfolio</h1>
+    <!-- Particles -->
+    <canvas id="canvas"></canvas>
+    <!-- A4 page background -->
+    <div class="a4-page">
+        <!-- Boxes -->
+        <div class="container">
+            <div class="flexboxes">
+            <div class="flexbox flexbox--big">
+                <h3 class="header-text">Oversikt</h3>
+                Dette prosjektet strakte seg over en tidsperiode på en måned og en uke, 
+                og utgjorde en betydningsfull utfordring som krevde dedikert innsats. 
+                I valg av prosjekttema ble det gitt frihet til å velge etter eget ønske, 
+                og jeg besluttet å ta initiativet til å realisere en nyskapende tilnærming 
+                innenfor porteføljeforvaltning. Min valgte tilnærming involverte utviklingen 
+                av en tredimensjonal løsning ved bruk av avanserte teknologier, deriblant 
+                JavaScript, Three.js, React.js, GSAP og Node.js.
+
+                Realiseringen av denne ambisiøse visjonen krevde omfattende ferdigheter og 
+                kunnskap innenfor de nevnte teknologirammeverkene. Implementeringen av Three.js 
+                muliggjorde den imponerende tredimensjonale visuelle representasjonen, 
+                mens React.js bidro til den overordnede systemstruktur og interaktiviteten. 
+                For å oppnå sømløs animasjon og brukeropplevelse, ble GSAP (GreenSock Animation Platform) nøye integrert.
+            </div>  
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Ressurser</h3>
+                <div class="image-container">
+                    <img src="Logos/Blender Logo.png" alt="Blender logo" style="max-width: 150px;">
+                    <img src="Logos/JavaSp Logo.png" alt="Javascript Logo" style="max-width: 150px;">
+                    <img src="Logos/GSAP.png" alt="GSAP Logo" style="max-width: 150px;">
+                    <img src="Logos/Node.js_logo.svg.png" alt="Node.js Logo" style="max-width: 150px;">
+                    <img src="Logos/CSS Logo.png" alt="CSS Logo" style="max-width: 150px;">
+                    <img src="Logos/Html Logo.png" alt="HTML Logo" style="max-width: 150px;">
+                </div>
+              </div>                       
+            <div class="flexbox flexbox--medium" id="column">
+                <h3 class="header-text">Samarbeidspartnere</h3> 
+               ingen
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Logg</h3> 
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rHB3H8DIdaIXUtM5?e=DTUp58" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Status</h3> 
+                <img src="Logos/Pending_Yellow.png" alt="Komplett" style="max-width: 110px;">
+                Fortsatt i Utvikling
+            </div>
+            <div class="flexbox flexbox--big" id="column">
+                <h3 class="header-text">Resultat</h3> 
+                link:
+                <a href="https://extoren.github.io/Portfolio/Menu.html" target="_blank">Interaktiv Portfolio</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const opts = { 
+        particleColor:  "#ffff00", // Change accordingly
+        lineColor: "rgb(255, 255, 0);", // Change accordingly
+        particleAmount: 30,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+    };
+    </script>
+    <script src="info.js"></script> 
+</body>
+</html>

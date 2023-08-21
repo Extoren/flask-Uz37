@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      html {
+    --scrollbarBG: black;
+    --thumbBG: yellow; /* Change accordingly */
+    }
+    body::-webkit-scrollbar {
+      width: 11px;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 3px solid var(--scrollbarBG);
+    }
+
+  /* Remove side scroll, we dont want that exposure*/
+  body {
+    overflow-x: hidden;
+  }
+    .char {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 4rem yellow; /* Change accordingly */
+    }
+
+    .char.fade-in {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 1rem yellow; /* Change accordingly */
+    }
+
+    .flexbox--small {
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium {
+    /* Increase the default flexbox size */
+    flex: 2 2 30em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: yellow;
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
+    }
+
+    .flexbox--big {
+    /* Increase the default flexbox size */
+    flex: 1 1 40em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: yellow; /* Change accordingly */
+    }
+    .flexbox--big {
+      flex-direction: column;
+    }
+    .flexbox--big a {
+      text-decoration: none;
+      color: yellow; /* Change accordingly */
+    }
+    #column {
+        flex-direction: column;
+    }
+
+    
+
+    
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
+    .navbar {
+        position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background:none;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 9999; /* Set a higher z-index value if needed */
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar-arrow {
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        transform: rotate(45deg);
+        margin-right: 10px;
+    }
+
+    .navbar-text {
+        color: rgb(255, 255, 0);
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
+        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+    </nav>
+    <!-- Header -->
+    <h1>Hacking</h1>
+    <!-- Particles -->
+    <canvas id="canvas"></canvas>
+    <!-- A4 page background -->
+    <div class="a4-page">
+        <!-- Boxes -->
+        <div class="container">
+            <div class="flexboxes">
+            <div class="flexbox flexbox--big">
+                <h3 class="header-text">Oversikt</h3>
+                Dette var en opplæringsseanse ledet av en ekspert innen databaser ved NRK, 
+                hvor vi ble gitt en unik mulighet til å utforske penetrasjon av en lokal 
+                database gjennom varierte tilnærminger og løsningsmetoder. Under denne opplæringen 
+                ble vi veiledet av en erfaren fagperson med ekspertise innen databaseadministrasjon 
+                og sikkerhet, som delte sin dypgående kunnskap om ulike tilnærminger for å kunne trenge 
+                gjennom databaseforsvaret.
+            </div>  
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Ressurser</h3>
+                <div class="image-container">
+                    <img src="Logos/C sharp.png" alt="C sharp logo" style="max-width: 150px;">
+                    <img src="Logos/NET_Core_Logo.svg.png" alt="Adobe After Effects logo" style="max-width: 150px;">
+                </div>
+              </div>                       
+            <div class="flexbox flexbox--medium" id="column">
+                <h3 class="header-text">Samarbeidspartnere</h3> 
+               ingen
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Logg</h3> 
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rHZHtGZxec5RaNi8?e=lob07K" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Status</h3> 
+                <img src="Logos/Complete_Yellow.png" alt="Komplett" style="max-width: 110px;">
+                Komplett
+            </div>
+            <div class="flexbox flexbox--big" id="column">
+                <h3 class="header-text">Resultat</h3> 
+                Kun lærdom i praksis
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const opts = { 
+        particleColor:  "#ffff00", // Change accordingly
+        lineColor: "rgb(255, 255, 0);", // Change accordingly
+        particleAmount: 30,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+    };
+    </script>
+    <script src="info.js"></script> 
+</body>
+</html>

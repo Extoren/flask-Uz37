@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oslo Skatehall Modell</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      html {
+    --scrollbarBG: black;
+    --thumbBG: white; /* Change accordingly */
+    }
+    body::-webkit-scrollbar {
+      width: 11px;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 3px solid var(--scrollbarBG);
+    }
+
+  /* Remove side scroll, we dont want that exposure*/
+  body {
+    overflow-x: hidden;
+  }
+    .char {
+    color: white; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 4rem white; /* Change accordingly */
+    }
+
+    .char.fade-in {
+    color: white; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 1rem white; /* Change accordingly */
+    }
+
+    .flexbox--small {
+    background-color: rgb(11, 11, 11);
+    border: 3px solid white; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium {
+    /* Increase the default flexbox size */
+    flex: 2 2 30em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid white; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
+    }
+
+    .flexbox--big {
+    /* Increase the default flexbox size */
+    flex: 1 1 40em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid white; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: white; /* Change accordingly */
+    }
+    .flexbox--big {
+      flex-direction: column;
+    }
+    .flexbox--big a {
+      text-decoration: none;
+      color: white; /* Change accordingly */
+    }
+    #column {
+        flex-direction: column;
+    }
+
+    
+
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
+    .navbar {
+        position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background:none;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 9999; /* Set a higher z-index value if needed */
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar-arrow {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        transform: rotate(45deg);
+        margin-right: 10px;
+    }
+
+    .navbar-text {
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
+        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+    </nav>
+    <!-- Header -->
+    <h1>Modell av Oslo Skatehall</h1>
+    <!-- Particles -->
+    <canvas id="canvas"></canvas>
+    <!-- A4 page background -->
+    <div class="a4-page">
+        <!-- Boxes -->
+        <div class="container">
+            <div class="flexboxes">
+            <div class="flexbox flexbox--big">
+                <h3 class="header-text">Oversikt</h3>
+                Dette var faktisk et lite prosjekt jeg ønsket å gjøre spesielt for Oslo Skatehall. 
+                Jeg brukte programmet Blender til å lage modellen av det jeg hadde i tankene. 
+                Det handlet egentlig om min interesse for skatehallen og ønsket mitt om å bidra 
+                på en kreativ måte. Ved å bruke Blender klarte jeg å skape en modell som både ser 
+                bra ut og som kan være nyttig for skatehallen.
+            </div>  
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Ressurser</h3>
+                <div class="image-container">
+                    <img src="Logos/Blender Logo.png" alt="Blender logo" style="max-width: 150px;">
+                </div>
+              </div>                       
+            <div class="flexbox flexbox--medium" id="column">
+                <h3 class="header-text">Samarbeidspartnere</h3> 
+               ingen
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Logg</h3> 
+                Ikke tilgjengelig
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Status</h3> 
+                <img src="Logos/Complete_White.png" alt="Komplett" style="max-width: 110px;">
+                Komplett
+            </div>
+            <div class="flexbox flexbox--big" id="column">
+                <h3 class="header-text">Resultat</h3> 
+                Link: <br>
+                <a href="https://sketchfab.com/3d-models/oslo-skatehall-004b7b1d26dc405aa8be86928ea9c592" target="_blank">Oslo Skatehall Modell</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const opts = { 
+        particleColor:  "#ffffff", // Change accordingly
+        lineColor: "rgb(255, 255, 255);", // Change accordingly
+        particleAmount: 30,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+    };
+    </script>
+    <script src="info.js"></script> 
+</body>
+</html>

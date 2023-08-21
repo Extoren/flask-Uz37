@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animasjon</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      html {
+    --scrollbarBG: black;
+    --thumbBG: yellow; /* Change accordingly */
+    }
+    body::-webkit-scrollbar {
+      width: 11px;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 3px solid var(--scrollbarBG);
+    }
+
+  /* Remove side scroll, we dont want that exposure*/
+  body {
+    overflow-x: hidden;
+  }
+    .char {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 4rem yellow; /* Change accordingly */
+    }
+
+    .char.fade-in {
+    color: yellow; /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 1rem yellow; /* Change accordingly */
+    }
+
+    .flexbox--small {
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium {
+    /* Increase the default flexbox size */
+    flex: 2 2 30em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: yellow;
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
+    }
+
+    .flexbox--big {
+    /* Increase the default flexbox size */
+    flex: 1 1 40em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid yellow; /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: yellow; /* Change accordingly */
+    }
+    .flexbox--big {
+      flex-direction: column;
+    }
+    .flexbox--big a {
+      text-decoration: none;
+      color: yellow; /* Change accordingly */
+    }
+    #column {
+        flex-direction: column;
+    }
+
+    
+
+    
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
+    .navbar {
+        position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background:none;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 9999; /* Set a higher z-index value if needed */
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar-arrow {
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        transform: rotate(45deg);
+        margin-right: 10px;
+    }
+
+    .navbar-text {
+        color: rgb(255, 255, 0);
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
+        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+    </nav>
+    <!-- Header -->
+    <h1>3D Animasjon</h1>
+    <!-- Particles -->
+    <canvas id="canvas"></canvas>
+    <!-- A4 page background -->
+    <div class="a4-page">
+        <!-- Boxes -->
+        <div class="container">
+            <div class="flexboxes">
+            <div class="flexbox flexbox--big">
+                <h3 class="header-text">Oversikt</h3>
+                Dette prosjektet utgjorde en betydningsfull komponent av skolens arrangement, 
+                kjent som F21 Fyrstikken. Utførelsen av animasjonen ble gjennomført i samarbeid 
+                med en anonym partner gjennom hele prosessen. Denne nøye gjennomførte animasjonen 
+                ble realisert ved hjelp av Blender, en anerkjent programvare for 3D-modellering 
+                og animasjon. Prosjektet fikk også støtte fra After Effects for å oppnå de ønskede 
+                visuelle effektene. Denne tverrfaglige tilnærmingen illustrerer både kreativitet og 
+                teknisk dyktighet, og resultatet representerer et vellykket eksempel på samarbeidets 
+                fruktbarhet. Det ferdige produktet reflekterer en symbiose av kunnskap, ferdigheter 
+                og samordnet innsats, der animasjonen står som en levende manifestasjon av dette engasjementet.
+            </div>  
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Ressurser</h3>
+                <div class="image-container">
+                    <img src="Logos/Blender Logo.png" alt="Blender logo" style="max-width: 150px;">
+                    <img src="Logos/adobe-after.png" alt="Adobe After Effects logo" style="max-width: 150px;">
+                </div>
+              </div>                       
+            <div class="flexbox flexbox--medium" id="column">
+                <h3 class="header-text">Samarbeidspartnere</h3> 
+               ingen
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Logg</h3> 
+                Ikke tilgjengelig
+            </div>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Status</h3> 
+                <img src="Logos/Complete_Yellow.png" alt="Komplett" style="max-width: 110px;">
+                Fortsatt i Utvikling
+            </div>
+            <div class="flexbox flexbox--big" id="column">
+                <h3 class="header-text">Resultat</h3> 
+                link:
+                <a href="https://www.youtube.com/watch?v=wdWwLX-rBfk&ab_channel=Extoren" target="_blank">3D Animasjon</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const opts = { 
+        particleColor:  "#ffff00", // Change accordingly
+        lineColor: "rgb(255, 255, 0);", // Change accordingly
+        particleAmount: 30,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+    };
+    </script>
+    <script src="info.js"></script> 
+</body>
+</html>

@@ -1,0 +1,98 @@
+  #canvas {
+    position: fixed;
+  }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: black;
+}
+
+html {
+  /* Set font-size at 10px for easier math */
+  font: normal 62.5%/1.5 sans-serif;
+}
+
+body {
+  /* Set default font-size at 14px */
+  font-size: 1.4rem;
+}
+
+.container {
+  /* Allow full screen for the container (100% of the viewport) */
+  height: 100vh;
+  padding: 10px 5px 0;
+}
+
+.flexboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Fill the parent's height */
+  height: 100%;
+}
+
+.flexbox {
+  /* Flex properties depending on the flexboxes class */
+  /* Set a default size to the flexbox */
+  flex: 2 2 15em;
+  align-self: stretch;
+  /* Flex properties for the Flexbox */
+  /* Center the content horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 10px;
+  padding: 10px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 50px;
+}
+
+
+
+@media only screen and (min-width: 640px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+
+.a4-page {
+    opacity: 0.9;
+    position: absolute;
+    width: 80%;
+    height: 100%; 
+    background-color: rgb(0, 0, 0);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 50px;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 9%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    text-align: center;
+}
