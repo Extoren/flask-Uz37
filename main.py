@@ -1,13 +1,34 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask, request, render_template, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key = 'fbfe54c431b28e24063d27c487c54d1d'  # Replace with your actual secret key
 
+# Simulated database of usernames and passwords
+users = {
+    "Extoren": "password1",
+}
 
-@app.route('/')
+@app.route("/")
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return render_template("index.html")
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        
+        if username in users and users[username] == password:
+            session['logged_in'] = True
+            return redirect(url_for("index"))
+        else:
+            return "Login failed"
+    return render_template("login.html")
 
-if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+@app.route("/logout")
+def logout():
+    session.pop('logged_in', None)
+    return redirect(url_for("index"))
+
+if __name__ == "__main__":
+    app.run(debug=True)
