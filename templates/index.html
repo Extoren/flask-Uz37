@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Portfolio</title>
+    <style>
+      #Green {
+        color: rgb(0, 255, 0);
+      }
+      #GreenB {
+        background-color: rgb(0, 255, 0);
+      }
+      #Blue {
+        color: rgb(0, 136, 220);
+      }
+      #BlueB {
+        background-color: rgb(0, 136, 220);
+      }
+      #Red {
+        color: rgb(255, 0, 0);
+      }
+      #RedB {
+        background-color: rgb(255, 0, 0);
+      }
+      #LightBlue {
+        color: rgb(0, 255, 225);
+      }
+      #LightBlueB {
+        background-color: rgb(0, 255, 225);
+      }
+      #White {
+        color:white;
+      }
+      #WhiteB {
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+        <nav id="navbar" class="">
+        <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+            <!-- Logo Placeholder for Inlustration -->
+            <a href="#home"><i class="fa fa-user-o"></i>Max Aarre</a>
+            </div>
+
+            <!-- Navbar Links -->
+            <ul id="menu">
+            <li><a href="#home">Home</a></li><!--
+        --><li><a href="#About">About</a></li><!--
+        --><li><a href="#Portfolio">Portfolio</a></li><!--
+        --><li><a href="{{ url_for('login') }}"><i class="fa fa-sign-in"></i></a></li>
+            </ul>
+        </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+        </div>
+
+
+        <div class="overlay-menu">
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="{{ url_for('login') }}"><i class="fa fa-sign-in"></i></a></li>
+            </ul>
+        </div>
+
+        
+<!-- First Parallax Image with Logo Text -->
+<section2 id="home">
+  <div class="bgimg-1 w3-opacity w3-display-container2">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <h1 class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">{% if session.logged_in %}
+          <p>Welcome Back</p>
+          {% endif %}Max Theodor <span class="w3-hide-small">Aarre</span></h1>
+      </div>
+    </div>
+</section2>
+  
+  <section id="About">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+   				<img src="https://extoren.github.io/Portfolio-3/images/Face%202.png" alt="Profile Picture">
+
+   				<p class="lead">I have completed my first year in Information Technology and Media Production (IM) and am now a student in Information Technology at Fyrstikkalleen School. I have a wide interest in contemporary technology, always aiming for the best results and being willing to invest time and effort towards achieving it. Learning and personal growth are crucial to me, and I value new ideas, thoughts, and constructive criticism to enhance my skills.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+        <h3>Profile</h3>
+        <p>I'm in my first year of studying information technology and media production, with a keen interest in technology and creativity.</p>
+        
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Max Theodor Aarre</span>
+   				</li>
+   			
+   				<li>
+   					<strong>Studying:</strong>
+   					<span>Information Technology</span>
+   				</li>
+   				<li>
+   					<strong>Website:</strong>
+   					<span>extoren.github.io/Portfolio-3/</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>max.t.aarre@gmail.com</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+   			<p>This has been learned through my first year of information technology and media production.</p>
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent70"><span>70%</span></div>
+				   	<strong>HTML5</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent70"><span>70%</span></div>
+				   	<strong>CSS3</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent50"><span>50%</span></div>
+				   	<strong>Javascript</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent35"><span>35%</span></div>
+				   	<strong>Database</strong>
+				   </li>
+				   <li>
+
+				   	<div class="progress percent60"><span>60%</span></div>
+				   	<strong>3D-Modeling</strong>
+				   </li>
+      
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="../static/images/CV_Custom.pdf" target="_blank" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section>
+  
+  
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container" >
+    <div class="w3-display-middle">
+      
+    </div>
+  </div>
+  
+
+
+<section3 id="Portfolio">
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64">
+    <h2 class="w3-center">Portfolio</h2>
+    <h1><p class="w3-center">Here are some of my latest works.<br> Click on the images to read more</p><br></h1>
+
+
+
+
+
+
+
+
+
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/space-invaders-gif-1.gif" alt="Space Invaders" id="fix" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="GreenB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="Green">
+              Space Invaders
+              <small>Unity 2D</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="Green">
+            Første spill laget i Unity, gjennom en Tutorial.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/1_SpaceInvaders.html" class="btn" id="GreenB" >Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/2D platformer.webp" alt="2D platfromer" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="BlueB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="Blue">
+              2D Platformer
+              <small>Unity 2D</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="Blue">
+            Andre spill laget i Unity, gjennom en Tutorial.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/2_2DPlatformer.html" class="btn" id="BlueB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Pixel-jul_Max.gif" alt="Pixel animasjon av et tre" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="RedB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="Red">
+              Pixel animasjon
+              <small>Photoshop</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="Red">
+            (Klasse prosjekt) Jule pixel animasjon, laget med Photshop timeline.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/3_PixelAnimasjon.html" class="btn" id="RedB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Azure.png" alt="Azure" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="LightBlueB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="LightBlue">
+              Azure
+              <small>Front-/Back-end</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="LightBlue">
+            Forståelse av Azure gjennom kurs og prøving.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/4_Azure.html" class="btn" id="LightBlueB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Portfolio 1.png" alt="Første Portfolio" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+              1. Portfolio
+              <small>HTML, CSS, Adobe Xd</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Første selvstendig nettside Portfolio laget, med forståelse av UX design.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/5_1Portfolio.html" class="btn">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/shooter.gif" alt="FPS game" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+              FPS game
+              <small>Unity 3D</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Første 3D Unity spill laget, for en liten forståelse av 3D Unity.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/6_FPS.html" class="btn">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/CV.png" alt="CV" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="WhiteB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="White">
+              CV
+              <small>Illustrator</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="White">
+            (Klasse prosjekt) CV laget med Adobe Illustrator.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/7_CV.html" class="btn" id="WhiteB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Lyddesign.gif" alt="Lyddesign" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="RedB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="Red">
+              Lyddesign
+              <small>Audition</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="Red">
+            (Klasse prosjekt) Lyddesign med Adobe Audition.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/8_LydDesign.html" class="btn" id="RedB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Trailer.gif" alt="The cyclops" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="RedB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="Red">
+              The cyclops
+              <small>Javascript / Blender</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="Red">
+            (Klasse prosjekt) Interaktiv historie programmert i Blender og kodet i Visual Studio Code
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/9_TheCyclops.html" class="btn" id="RedB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Blender design 2.png" alt="3D modell av Oslo Skatehall" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="WhiteB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="White">
+              model Oslo Skatehall
+              <small>Blender</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="White">
+            Laget for Oslo Skatehall praksis uke.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/10_OsloSkatehall.html" class="btn" id="WhiteB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Squarespace.png" alt="Squarespace" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="WhiteB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="White">
+              Squarespace
+              <small>Front End Utvikling</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="White">
+            Praksis uke med Oslo Skatehall.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/11_SquareSpace.html" class="btn" id="WhiteB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Portfolio 2.png" alt="Portfolio 2" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+              2. Portfolio
+              <small>Blender, Javascript</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Prøving av Three.js, React.js, GSAP og node.js med 3D modell lagd i Blender.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/12_2Portfolio.html" class="btn">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Animation.gif" alt="Animasjon" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+              3D Animasjon
+              <small>Blender, Audition, After Effects</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            (Gruppe prosjekt) Animasjon laget for Fyrstikken.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/13_Animasjon.html" class="btn">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Brosjyre.png" alt="Brosjyre" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn" id="LightBlueB">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2 id="LightBlue">
+              Brosjyre
+              <small>Adobe Xd</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description" id="LightBlue">
+            (Naturfag prosjekt) Bli kjent med Adobe Xd
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/14_Brosjyre.html" class="btn" id="LightBlueB">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../static/images/Post/Nrk.png" alt="Back-end hacking" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+              Hacking
+              <small>Back-end hacking</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Testing av hacking med en profesjonell fra NRK. 
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="info/15_Hacking.html" class="btn">Les mer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    
+    
+    
+  </div>
+</div>
+
+  
+
+
+
+
+ 
+</section3>
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+        <!--{% if session.logged_in %}
+        <p>You are logged in.</p>
+        {% endif %}-->
+
+
+
+        
+        <script src="../static/script.js"></script>
+
+        
+</body>
+</html>

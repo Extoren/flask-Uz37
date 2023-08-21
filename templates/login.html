@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Log in</title>
+</head>
+<body>
+    <div id="back">
+        <canvas id="canvas" class="canvas-back"></canvas>
+        <div class="backRight"></div>
+        <div class="backLeft">
+            <p>Welcome!</p>
+        </div>
+    </div>
+      
+    <div id="slideBox">
+        <div class="topLayer">
+            <div class="right">
+                <div class="content">
+                    <h2>Login</h2>
+                    <form id="form-login" method="post" action="/login">
+                      <div class="form-element form-stack">
+                          <label for="username-login" class="form-label">Username</label>
+                          <input id="username-login" type="text" name="username">
+                      </div>
+                      <div class="form-element form-stack">
+                          <label for="password-login" class="form-label">Password</label>
+                          <input id="password-login" type="password" name="password">
+                      </div>
+                      <div class="form-element form-submit">
+                          <button id="logIn" class="login" type="submit" name="login">Log In</button>
+                      </div>
+                  </form>                  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
