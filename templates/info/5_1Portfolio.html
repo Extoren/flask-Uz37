@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Første Portfolio</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
     <style>
       html {
     --scrollbarBG: black;
@@ -129,8 +129,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
-        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+      <a href="{{ url_for('index') }}">
+        <div class="navbar-arrow"></div>
+    </a>
+    <a href="{{ url_for('index') }}">
+        <div class="navbar-text">Go Back?</div>
+    </a>
     </nav>
     <!-- Header -->
     <h1>Første Portfolio</h1>
@@ -157,29 +161,29 @@
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Ressurser</h3>
                 <div class="image-container">
-                    <img src="Logos/Html Logo.png" alt="HTML Logo" style="max-width: 150px;">
-                    <img src="Logos/JavaSp Logo.png" alt="Javascript Logo" style="max-width: 150px;">
-                    <img src="Logos/CSS Logo.png" alt="Adobe CSS Logo" style="max-width: 150px;">
-                    <img src="Logos/Adobe Xd.png" alt="Adobe Xd Logo" style="max-width: 150px;">
-                    <img src="Logos/Adobe Illustrator.png" alt="Adobe Illustrator Logo" style="max-width: 150px;">
-                    <img src="Logos/Adobe Photoshop.png" alt="Adobe Photoshop Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/Html Logo.png" alt="HTML Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/JavaSp Logo.png" alt="Javascript Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/CSS Logo.png" alt="Adobe CSS Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/Adobe Xd.png" alt="Adobe Xd Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/Adobe Illustrator.png" alt="Adobe Illustrator Logo" style="max-width: 150px;">
+                    <img src="/static/images/Logos/Adobe Photoshop.png" alt="Adobe Photoshop Logo" style="max-width: 150px;">
                 </div>
               </div>                       
             <div class="flexbox flexbox--medium" id="column">
-                <h3 class="header-text">Samarbeidspartnere</h3> 
+                <h3 class="header-text">Partners</h3> 
                ingen
             </div>
             <div class="flexbox flexbox--small" id="column">
-                <h3 class="header-text">Logg</h3> 
-                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rGTqXgXsFER4eoI4?e=5dgCVq" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+                <h3 class="header-text">Log</h3> 
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rGTqXgXsFER4eoI4?e=5dgCVq" target="_blank"><img src="/static/images/Logos/PowerPoint.png" alt="PowerPoint Log" style="max-width: 150px;"></a>
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Status</h3> 
-                <img src="Logos/Complete_Yellow.png" alt="Komplett" style="max-width: 110px;">
+                <img src="/static/images/Logos/Complete_Yellow.png" alt="Komplett" style="max-width: 110px;">
                 Komplett
             </div>
             <div class="flexbox flexbox--big" id="column">
-                <h3 class="header-text">Resultat</h3> 
+                <h3 class="header-text">Result</h3> 
                 Link: <br>
                 <a href="https://portfoliomax.z1.web.core.windows.net/index.html" target="_blank">Portfolio</a>
             </div>
@@ -199,6 +203,6 @@
         linkRadius: 200,
     };
     </script>
-    <script src="info.js"></script> 
+    <script src="/static/info.js"></script> 
 </body>
 </html>

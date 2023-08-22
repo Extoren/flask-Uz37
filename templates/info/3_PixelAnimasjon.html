@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceInvaders</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
     <style>
       html {
     --scrollbarBG: black;
@@ -110,8 +110,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
-        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+      <a href="{{ url_for('index') }}">
+        <div class="navbar-arrow"></div>
+    </a>
+    <a href="{{ url_for('index') }}">
+        <div class="navbar-text">Go Back?</div>
+    </a>
     </nav>
     <!-- Header -->
     <h1>Pixel Animasjon</h1>
@@ -123,34 +127,35 @@
         <div class="container">
             <div class="flexboxes">
             <div class="flexbox flexbox--big">
-                <h3 class="header-text">Oversikt</h3>
-                Innledende Pixelbasert GIF-animasjon realisert ved hjelp av Adobe Photoshop, 
-                markerte en betydningsfull milepæl i anvendelsen av programvaren. 
-                Denne opprettelsen representerer et fruktbart resultat av en dedikert 
-                innsats under en tidsbestemt prosjektsession, med formålet å utdype 
-                forståelsen av Adobe Photoshop's funksjoner, spesielt innenfor pixelkunstens domene.
+                <h3 class="header-text">Overview</h3>
+                Initial Pixel-based GIF animation realized using Adobe Photoshop 
+                marked a significant milestone in the application of the software. 
+                This creation represents a fruitful outcome of dedicated efforts 
+                during a specific project session, with the aim of deepening the 
+                understanding of Adobe Photoshop's features, particularly within 
+                the domain of pixel art.
             </div>  
             <div class="flexbox flexbox--small" id="column">
-                <h3 class="header-text">Ressurser</h3>
+                <h3 class="header-text">Resources</h3>
                 <div class="image-container">
-                  <img src="Logos/Adobe Photoshop.png" alt="Adobe Photoshop Logo" style="max-width: 200px;">
+                  <img src="/static/images/Logos/Adobe Photoshop.png" alt="Adobe Photoshop Logo" style="max-width: 200px;">
                 </div>
               </div>                       
             <div class="flexbox flexbox--medium" id="column">
-                <h3 class="header-text">Samarbeidspartnere</h3> 
-                Ingen
+                <h3 class="header-text">Partners</h3> 
+                None
             </div>
             <div class="flexbox flexbox--small" id="column">
-                <h3 class="header-text">Logg</h3> 
-                <p>Ikke tilgjengelig</p>
+                <h3 class="header-text">Log</h3> 
+                <p>Not available</p>
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Status</h3> 
-                <img src="Logos/Complete_Red.png" alt="Komplett" style="max-width: 110px;">
+                <img src="/static/images/Logos/Complete_Red.png" alt="Complete" style="max-width: 110px;">
                 Komplett
             </div>
             <div class="flexbox flexbox--big" id="column">
-                <h3 class="header-text">Resultat</h3> 
+                <h3 class="header-text">Result</h3> 
                 link:
                 <a href="../images/Pixel-jul_Max.gif" target="_blank">Pixel Animasjon</a>
             </div>
@@ -170,6 +175,6 @@
         linkRadius: 200,
     };
     </script>
-    <script src="info.js"></script> 
+    <script src="/static/info.js"></script> 
 </body>
 </html>

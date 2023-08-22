@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azure</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
     <style>
       html {
     --scrollbarBG: black;
@@ -118,8 +118,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="../portfolio.html"><div class="navbar-arrow"></div></a>
-        <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+      <a href="{{ url_for('index') }}">
+        <div class="navbar-arrow"></div>
+    </a>
+    <a href="{{ url_for('index') }}">
+        <div class="navbar-text">Go Back?</div>
+    </a>
     </nav>
     <!-- Header -->
     <h1>Azure</h1>
@@ -131,39 +135,42 @@
         <div class="container">
             <div class="flexboxes">
             <div class="flexbox flexbox--big">
-                <h3 class="header-text">Oversikt</h3>
-                Dette kurset vil gi meg en unik mulighet til å utvide min forståelse 
-                av hvordan Microsoft Azure fungerer i både praktisk anvendelse og teoretiske konsepter. 
-                Jeg ser frem til å fordype meg i ulike aspekter av Azure-plattformen gjennom en omfattende 
-                læreplan som er designet for å bygge opp mitt fundament innenfor dette området.
+                <h3 class="header-text">Overview</h3>
+                This course will provide me with a unique opportunity to expand my 
+                understanding of how Microsoft Azure operates in both practical 
+                application and theoretical concepts. I look forward to immersing 
+                myself in various aspects of the Azure platform through a comprehensive 
+                curriculum designed to build my foundation in this field.
 
-                Gjennom kurset vil jeg bli introdusert for grunnleggende elementer av Azure-økosystemet, 
-                og jeg vil få muligheten til å praktisk utforske ulike tjenester og verktøy som tilbys.
-                 Samtidig vil jeg også få innsikt i teoretiske prinsipper som ligger til grunn for plattformens 
-                 funksjonalitet. Dette vil hjelpe meg med å forstå ikke bare hva jeg gjør i praksis, men også hvorfor det fungerer slik det gjør.
+                Throughout the course, I will be introduced to fundamental elements 
+                of the Azure ecosystem, and I will have the opportunity to practically
+                explore various services and tools that are offered. At the same time,
+                I will also gain insight into the theoretical principles underlying the 
+                platform's functionality. This will help me understand not only what I 
+                am doing in practice, but also why it works the way it does.
             </div>  
             <div class="flexbox flexbox--small" id="column">
-                <h3 class="header-text">Ressurser</h3>
+                <h3 class="header-text">Resources</h3>
                 <div class="image-container">
-                  <img src="Logos/Azure.png" alt="Adobe Photoshop Logo" style="max-width: 200px;">
+                  <img src="/static/images/Logos/Azure.png" alt="Adobe Photoshop Logo" style="max-width: 200px;">
                 </div>
               </div>                       
             <div class="flexbox flexbox--medium" id="column">
-                <h3 class="header-text">Samarbeidspartnere</h3> 
-                Kurs leder: <a href="https://no.linkedin.com/in/haidar-nuri-4b414b1a0">Haider Nuri</a>
+                <h3 class="header-text">Partners</h3> 
+                Course leader: <a href="https://no.linkedin.com/in/haidar-nuri-4b414b1a0">Haider Nuri</a>
             </div>
             <div class="flexbox flexbox--small" id="column">
-                <h3 class="header-text">Logg</h3> 
-                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rGKpMt24i7--Z9e0?e=Qb7fZf" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+                <h3 class="header-text">Log</h3> 
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rGKpMt24i7--Z9e0?e=Qb7fZf" target="_blank"><img src="/static/images/Logos/PowerPoint.png" alt="PowerPoint Log" style="max-width: 150px;"></a>
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Status</h3> 
-                <img src="Logos/Complete_Cyan.png" alt="Komplett" style="max-width: 110px;">
+                <img src="/static/images/Logos/Complete_Cyan.png" alt="Komplett" style="max-width: 110px;">
                 Komplett
             </div>
             <div class="flexbox flexbox--big" id="column">
-                <h3 class="header-text">Resultat</h3> 
-                Kun lærdom i praksis
+                <h3 class="header-text">Result</h3> 
+                Only learning in practice
             </div>
             </div>
         </div>
@@ -181,6 +188,6 @@
         linkRadius: 200,
     };
     </script>
-    <script src="info.js"></script> 
+    <script src="/static/info.js"></script> 
 </body>
 </html>
